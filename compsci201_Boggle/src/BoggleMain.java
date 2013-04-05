@@ -12,11 +12,11 @@ public class BoggleMain {
 
     public static void main(String[] args) {
         
-        ILexicon lexicon = new SimpleLexicon();
+        ILexicon lexicon = new BinarySearchLexicon();
         IWordOnBoardFinder finder = new GoodWordOnBoardFinder();
         
         InputStream is = lexicon.getClass().getResourceAsStream("/ospd3.txt");      
-        IAutoPlayer compPlayer = new LexiconFirstAutoPlayer();
+        IAutoPlayer compPlayer = new BoardFirstAutoPlayer();
         BoggleGUI bgui = new BoggleGUI(lexicon,finder,is, compPlayer);
     }
 

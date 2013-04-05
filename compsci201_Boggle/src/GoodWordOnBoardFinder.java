@@ -32,7 +32,7 @@ public class GoodWordOnBoardFinder implements IWordOnBoardFinder {
 		}
 		String onBoard = board.getFace(r, c);
 		int ind2;
-		if(onBoard.equals("Q")) {
+		if(onBoard.equals("qu")) {
 			ind2 = Math.min(ind+2,word.length()-1);
 		}else {
 			ind2 = ind + 1;
