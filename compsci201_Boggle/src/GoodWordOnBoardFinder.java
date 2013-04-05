@@ -6,6 +6,7 @@ public class GoodWordOnBoardFinder implements IWordOnBoardFinder {
 	@Override
 	public List<BoardCell> cellsForWord(BoggleBoard board, String word) {
 		// TODO Auto-generated method stub
+		ArrayList<BoardCell> nullList = new ArrayList<BoardCell>();
 		ArrayList<BoardCell> list = new ArrayList<BoardCell>();
 		for(int r = 0; r < board.size(); r++) {
 			for(int c = 0; c < board.size(); c++/*ha!*/) {
@@ -15,7 +16,7 @@ public class GoodWordOnBoardFinder implements IWordOnBoardFinder {
 				}
 			}
 		}
-		return null;
+		return nullList;
 	}
 
 	public boolean helper(BoggleBoard board, int r, int c, ArrayList<BoardCell> list, int ind, String word) {
